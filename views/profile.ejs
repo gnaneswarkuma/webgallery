@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <style>
+        *
+        {
+            margin: 0%;
+            padding: 0%;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .a
+        {
+            
+            width: 100%;
+            height: 100%;
+            background-image:url(https://t3.ftcdn.net/jpg/05/28/86/66/360_F_528866602_aiVwnOnkooTrqo3MgicCf83SVVzt1Gnd.jpg) ; 
+             background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            color: white;
+            overflow-x: hidden;
+            gap: 500px;
+           
+        }
+        input{
+            width: 500px;
+            height: 50px;
+        }
+        .users
+       {
+        background-color:transparent;
+        width: 90%;
+        height: 650px;
+        border-radius: 40px;
+        padding: 30px;
+       display: flex;
+       position: relative;
+       left: 100px;
+       flex-wrap: wrap;
+       overflow-y:scroll;
+       
+       }
+       .user{
+        background-color: rgba(0, 4, 7, 0);
+        width: 200px;
+        max-height: 230px;
+        border-radius: 50px;
+        padding: 30px;
+        text-align: center;
+        margin: 10px;
+        backdrop-filter: blur(30px);
+             
+       }
+       .im{
+        width: 200px;
+        height: 200px;
+        border-radius: 50px;
+       }
+       .a{
+        padding: 50px;
+       }
+        .nav
+        {
+            display: flex;
+            align-items: center;
+            justify-content:space-between;
+            padding: 40px 50px;
+            color: rgb(9, 20, 29);
+        }
+        .full
+        {
+            height: 100%;
+            width: 40%;
+            background-color: rgba(240, 248, 255, 0);
+            position: absolute;
+            top: 0;
+           backdrop-filter: blur(30px);
+            
+
+right: -50%;        
+}
+.full h3,i{
+    color:rgb(14, 5, 5);
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.full i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(49, 46, 46);
+    border-radius: 50px;
+}
+    </style>
+</head>
+<body>
+    <div class="a">
+        <div class="nav">
+            <h2 style="font-size:30px;color:green;font-size: 100px;">Web<sub style="color: rgb(244, 250, 244);">Gal</sub><sub>lery</sub></h2>
+            <i id="rrr" style="font-size: 30px;font-weight: 800;" class="ri-menu-line"></i>
+            
+           </div>
+        <div class="full" style="z-index: 100;">
+            <h3><a href="/" style="text-decoration: none;color: rgb(248, 251, 248);">Home</a></h3>
+            <h3><a href="/create" style="text-decoration: none;color: rgb(255, 255, 255);">Create</a></h3>
+            <h3><a href="/login" style="text-decoration: none;color: rgb(242, 246, 242);">Login</a></h3>
+            <h3><a href="/profile" style="text-decoration: none;color:white;">Profile</a></h3>
+            <i class="ri-close-line"></i>
+            
+        </div>
+           
+        <form style="display: flex;flex-direction:row;gap:20px;justify-content: center;width: 100%;" method="post" action="/post">
+            <textarea style="resize: none;width: 25%;height:50px;border-radius: 2%;background-color: transparent;" placeholder="Enter the URL of the image:" name="content" id=""></textarea>
+             <input style="background-color: black;color: white;border-radius: 100px;" type="submit" value="save img">
+        </form>
+        <div class="users">
+            <%user.posts.forEach(function(post){%>
+                <div class="user">
+                    <h3 style="color: black;"><%=user.name%></h3>
+                    <div style="width: 100%;height: 200px ;background-color: transparent;border-radius: 50px;">
+                        <img src="" alt="">
+                     <img class="im" src="<%=post.content%>" alt="image can`t found">
+                    </div>
+                    <div class="u" style="display: flex;justify-content:space-around;align-items: center;">
+                        <a href="/edit/<%=user._id%>" class="edit" style="color:blue;">Edit</a>
+                        <a href="/delete/<%=user._id%>" class="delete" style="color:red;">Delete</a>
+                    </div>
+                </div>
+
+          <%  })%>
+            
+            
+        </div>
+    
+    </div>
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        var tl = gsap.timeline()
+        var dd=document.querySelector(".full i");
+        var d=document.querySelector(".nav i");
+        tl.to(".full",{
+            right:0,
+            duration:0.8,
+        })
+        tl.from(".full h3",{
+            stagger:0.4,
+            duration:0.8,
+            x:100,
+            opacity:0,
+            ease:"elastic.out",
+        })
+        tl.pause();
+        d.addEventListener("click",function()
+    {
+       tl.play();
+    })
+    dd.addEventListener("click",function()
+    {
+       tl.reverse();
+    })
+    gsap.from("form input",{
+        stagger:0.4,
+        duration:4,
+        
+        width:0,
+        // rotateY:"360deg",
+        opacity:0,
+        scale:0,
+        ease:"elastic.out"
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            
+        }
+        body
+        {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            background-color: rgb(203, 195, 195);
+        }
+        .a
+        {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(203, 195, 195);
+            
+        }
+        /* .b
+        {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(203, 195, 195);
+            
+            
+        } */
+       
+        img{
+            background-color: rgb(203, 195, 195);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            mix-blend-mode: darken;
+            /* background-color: white; */
+            /* mix-blend-mode:darken; */
+
+        }
+        /* .box
+        {
+            width: 80%;
+            height: 80%;
+            position: absolute;
+            right: 0%;
+            
+            
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content:space-around ;
+
+
+            
+        } */
+        span{
+            
+           
+            display: inline-block;
+            
+        }
+        
+        /* a{
+            z-index: 100;
+            text-decoration:none;
+            color:yellow;
+            display: flex;
+            align-items: center;
+            justify-content:space-around ;
+            position: absolute;
+            bottom: 40%;
+            right:50%;
+            scale:0,
+
+
+
+        }
+        .x{
+            display: flex;
+            flex-direction: column;
+            gap:-10%;
+        } */
+        .board{
+            scale: 0;
+            border-radius: 100%;
+            width: 100%;
+            height: 100%;
+            background-image:url(https://t3.ftcdn.net/jpg/05/28/86/66/360_F_528866602_aiVwnOnkooTrqo3MgicCf83SVVzt1Gnd.jpg) ; 
+             background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            z-index: 10000;
+            position: absolute;
+
+            
+        }
+        .r{
+            width: 2rem;
+            height: 2rem;
+            background-color: blueviolet;
+        }
+        .main
+        {
+            height: 100%;
+            width: 100%;
+            
+            /* backdrop-filter: blur(30px); */
+           
+        }
+        .nav
+        {
+            display: flex;
+            align-items: center;
+            justify-content:space-between;
+            padding: 40px 50px;
+            color: rgb(9, 20, 29);
+        }
+        .full
+        {
+            height: 100%;
+            width: 40%;
+            background-color: rgba(240, 248, 255, 0);
+            position: absolute;
+            top: 0;
+           backdrop-filter: blur(30px);
+           scale: 0;
+            
+
+right: -50%;        
+}
+.full h3,i{
+    color:rgb(14, 5, 5);
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.full i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(49, 46, 46);
+    border-radius: 50px;
+}
+    </style>
+</head>
+<body>
+    
+
+    <div class="a">
+        
+        <h1 style="position: fixed;top:50%;right: 40%;scale:7;color: rgba(1, 68, 23, 0.822);z-index: 100;" >WebGallery</h1>
+        <img style="position: fixed;top:0%" class="im4" src="https://www.freeiconspng.com/uploads/tree-top-png-27.png" alt="">
+        <img style="position: fixed;left:-20%;bottom: 20%;" class="im3" src="https://toppng.com/uploads/preview/tree-115510576316zucjtw9rp.png" alt="">
+       <img style="position: fixed;" class="im2" style="z-index: 10;" src="https://img.freepik.com/premium-psd/png-tropical-leaves-transparent-background_53876-194142.jpg" alt="">
+        
+         <img class="im1" style="position: fixed;z-index: 1;width: 500px;height: 500px;right:0%;" src="https://img.freepik.com/premium-psd/tropical-tree-leaves-branch-foreground-isolated_181653-4959.jpg" alt="">
+        <img  class="im" style="position: fixed;" src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA4L3Jhd3BpeGVsb2ZmaWNlMl9kaWdpdGFsX3BhaW50X21pbmltYWxfaWxsdXN0cmF0aW9uX29mX2NsZWFuX2p1bl8wNzUzYTY0ZC03ZDYxLTRjZjItYmI4YS0wNGMzMjFhYjViYzBfMS5wbmc.png" alt="">
+        <div class="board">
+                
+            <div class="nav">
+                <h2 style="font-size:30px;color:green;font-size: 100px;">Web<sub style="color: rgb(244, 250, 244);">Gal</sub><sub>lery</sub></h2>
+                <i id="rrr" style="font-size: 30px;font-weight: 800;" class="ri-menu-line"></i>
+                
+               </div>
+            <div class="full" style="z-index: 100;">
+                <h3><a href="/" style="text-decoration: none;color: rgb(248, 251, 248);">Home</a></h3>
+                <h3><a href="/create" style="text-decoration: none;color: rgb(255, 255, 255);">Create</a></h3>
+                <h3><a href="/login" style="text-decoration: none;color: rgb(242, 246, 242);">Login</a></h3>
+                <h3><a href="/profile" style="text-decoration: none;color:white;">Profile</a></h3>
+                <i class="ri-close-line"></i>
+                
+            </div>
+    </div>
+    </div>
+    
+    <!-- <div class="b"> -->
+        <!-- <div class="box">
+            <div class="circle"><label for=""><a style="z-index: 100;text-decoration: none;color:yellow;" class="x" href="/"><div class="">Create</div>
+                <div class="">Account</div></a></label></div>
+            <div class="circle"><a style="z-index: 100;text-decoration: none;color:yellow;" href="/login">login</a></div>
+            
+        </div> -->
+    <!-- </div> -->
+    
+    
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+      <script>
+        var a=document.querySelector("h1");
+        var h1=a.textContent;
+        var s=h1.split("");
+        var c="";
+        // var hh=Math.floor(s.length()/2);
+        s.forEach(function(ele,idx)
+    {
+        if(idx<3){
+        c+=`<span class="aa" >${ele}</span>`
+        }
+        else{
+            c+=`<span class="bb">${ele}</span>`
+        }
+     
+    })
+
+
+
+    
+        a.innerHTML=c;
+        // var tl = gsap.timeline();
+        // tl.from("h1 span",
+        //     {
+                
+        //         color:"red",
+        //         opacity:0,
+        //         y:150,
+        //         ease:"elastic.out",
+        //         duration:1,
+        //         rotate:"100deg",
+        //         stagger:0.3,
+        //     }
+        // )
+
+        var tl = gsap.timeline()
+        var dd=document.querySelector(".full i");
+        var d=document.querySelector(".nav i");
+        tl.to(".full",{
+            right:0,
+            // opacity:0,
+    scale:1,
+            duration:0.8,
+        })
+        tl.from(".full h3",{
+            stagger:0.4,
+            duration:0.8,
+            x:100,
+            opacity:0,
+            ease:"elastic.out",
+        })
+        tl.pause();
+        d.addEventListener("click",function()
+    {
+       tl.play();
+    })
+    dd.addEventListener("click",function()
+    {
+       tl.reverse();
+    })
+        // tl.to("h1",
+        //     {
+        //         delay:0,
+        //         ease:"elastic.in",
+        //         opacity:0,
+        //         x:"100%",
+        //         duration:2,
+        //         color:"white",
+
+        //     }
+        // )
+       
+         gsap.to('.board',{
+            scale:1,
+            duration:30,
+            borderRadius:0,
+            delay:2000,
+            scrollTrigger:{
+                trigger:".board",
+                scroller:"body",
+                start:"top:60%",
+                scrub:5,
+                pin:true,
+                
+            }
+         })
+
+
+        gsap.to("a",{
+    scale:2,
+    color:"rgb(14, 114, 22)",
+    scrollTrigger:{
+        trigger:"a",
+        scroller:"body",
+        start:"top:60%",
+        scrub:5,
+        
+    }
+    })
+
+    
+    
+//   }) 
+         
+
+
+
+         gsap.to(".aa",{
+    x:-150,
+    duration:3,
+    scrollTrigger:{
+        trigger:".aa",
+        scroller:"body",
+        start:"top:60%",
+        scrub:5,
+        
+
+    }
+
+    
+    
+  })
+  gsap.to(".bb",{
+    x:200,
+    scrollTrigger:{
+        trigger:".bb",
+        scroller:"body",
+        start:"top:60%",
+        scrub:5,
+        
+
+    }
+
+    
+    
+  }) 
+    
+        
+         gsap.to(".im",{
+            scale:2,
+            duration:3,
+            scrollTrigger:{
+                trigger:".im1",
+                scroller:"body",
+                start:"top:60%",
+                scrub:5,
+                
+
+            }
+
+            
+            
+          })
+          
+          gsap.to(".im1",{
+            x:150,
+            duration:3,
+            scrollTrigger:{
+                trigger:".im1",
+                scroller:"body",
+                start:"top:60%",
+                scrub:5,
+                
+
+            }
+
+            
+            
+          })
+          gsap.to(".im2",{
+            y:250,
+            duration:3,
+            scrollTrigger:{
+                trigger:".im2",
+                scroller:"body",
+                start:"top:60%",
+                scrub:5,
+            }
+
+            
+            
+          })
+          gsap.to(".im3",{
+            x:-350,
+            duration:3,
+            scrollTrigger:{
+                trigger:".im3",
+                scroller:"body",
+                start:"top:60%",
+                scrub:5,
+            }
+
+            
+            
+          })
+          gsap.to(".im4",{
+            x:-250,
+            y:-200,
+            duration:3,
+            scrollTrigger:{
+                trigger:".im3",
+                scroller:"body",
+                start:"top:60%",
+                scrub:5,
+            }
+
+            
+            
+          })
+        
+      
+          
+  
+  
+      </script>
+</body>
+</html>
+
